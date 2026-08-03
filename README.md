@@ -1,16 +1,26 @@
-# React + Vite
+# Мой трекер — привычки и челленджи
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Мобильное веб-приложение (PWA) для ежедневного отслеживания привычек: воздержание, отказ от снюса, спортзал, чтение и любые свои цели. Работает офлайн, все данные хранятся локально в браузере (localStorage) и не отправляются никуда.
 
-Currently, two official plugins are available:
+## Возможности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Привычки двух типов**: «отказ / воздержание» (снюс, ПАВ и т.п.) и «регулярное действие» (спортзал, чтение). Можно добавлять свои с иконкой и цветом.
+- **Ежедневные отметки** на главном экране одним касанием, история по месяцам в виде календаря — можно отметить или исправить любой прошедший день.
+- **Серии (streak)**: текущая серия, рекорд, счётчик срывов и дата последнего.
+- **Челленджи** на 7/21/30/50/100 дней (или своё число) — прогресс считается по конкретной привычке от даты старта.
+- **Приглашение друзей**: у каждого челленджа есть ссылка-приглашение — друг открывает её, и у него создаётся такой же челлендж, который он отмечает у себя. Общего сервера нет, поэтому прогресс не синхронизируется автоматически — каждый ведёт свой локально и делится результатами вручную.
+- **Приватный режим** в настройках — скрывает названия привычек на экране, если рядом кто-то смотрит.
+- **Резервное копирование**: экспорт/импорт всех данных в JSON-файл, чтобы не потерять историю при смене устройства.
 
-## React Compiler
+## Разработка
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+- `npm run build` — сборка production-версии
+- `npm run lint` — проверка кода линтером
+- `npm run preview` — предпросмотр собранного приложения
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Стек: React 19 + Vite + Tailwind CSS.
