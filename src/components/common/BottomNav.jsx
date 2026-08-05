@@ -1,10 +1,10 @@
-import { Home, Users, Calendar, DollarSign } from 'lucide-react'
+import { Home, ListChecks, Trophy, Settings } from 'lucide-react'
 
 const TABS = [
-  { id: 'dashboard', label: 'Главная',   Icon: Home },
-  { id: 'students',  label: 'Ученики',   Icon: Users },
-  { id: 'schedule',  label: 'Расписание', Icon: Calendar },
-  { id: 'finance',   label: 'Финансы',   Icon: DollarSign },
+  { id: 'dashboard',  label: 'Главная',   Icon: Home },
+  { id: 'habits',     label: 'Привычки',  Icon: ListChecks },
+  { id: 'challenges', label: 'Челленджи', Icon: Trophy },
+  { id: 'settings',   label: 'Настройки', Icon: Settings },
 ]
 
 export default function BottomNav({ active, onNavigate }) {
